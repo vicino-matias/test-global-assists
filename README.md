@@ -41,6 +41,7 @@ Antes de desplegar la aplicación en Vercel, asegúrate de que tu proyecto de Re
 ## 2. Desplegar la Aplicación en Vercel
 
 Pasos para desplegar en Vercel:
+
 1- Iniciar sesión en Vercel: Ve a Vercel e inicia sesión con tu cuenta de GitHub, GitLab o Bitbucket.
 
 2- Crear un nuevo proyecto: En el panel de control de Vercel, haz clic en "New Project".
