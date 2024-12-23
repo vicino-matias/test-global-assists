@@ -1,75 +1,53 @@
 <<<<<<< HEAD
 # global-assist-test
-Theres the test for technical interview.
+Esto es un test para una entrevista tecnica.
 =======
-# Getting Started with Create React App
+# Explicación del Código de la Aplicación React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Importaciones y Estado Inicial
 
-## Available Scripts
+La aplicación importa useState de React para gestionar el estado de los filtros y la paginación. Además, se importa un archivo JSON (data.json) que contiene los datos que se van a mostrar.
 
-In the project directory, you can run:
+### Estado de la aplicación:
 
-### `npm start`
+filters: Mantiene los valores actuales de los filtros de búsqueda (nombre, apellido, email, género, dirección IP y país).
+currentPage: Indica la página actual de la tabla para la paginación.
+rowsPerPage: Define el número de filas que se mostrarán por página (10 en este caso).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. Filtrado de Datos
+La función filteredData filtra los datos basándose en los valores de los filtros. Utiliza Object.keys(filters) para iterar sobre los filtros, y para cada filtro, verifica si el valor de la propiedad coincide con los datos.
 
-### `npm test`
+El resultado de la filtración es luego ordenado, priorizando las coincidencias exactas (es decir, si el valor de un filtro coincide exactamente con un valor de la propiedad).
+## 3. Paginación
+La paginación se maneja mediante las variables startIndex y endIndex, que se calculan según la página actual. La función paginatedData obtiene solo los elementos que pertenecen a la página actual.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. Manejo de Filtros
+Los filtros se actualizan mediante la función handleFilterChange, que actualiza el estado de los filtros. Además, restablece la página actual a la página 1 cuando se aplica un filtro nuevo.
 
-### `npm run build`
+## 5. Renderizado de la Tabla
+La aplicación muestra una tabla con los datos filtrados y paginados. Los usuarios pueden filtrar las columnas usando campos de texto. Los filtros se aplican en tiempo real a medida que el usuario escribe en cada campo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Despliegue (Deploy)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La aplicacion esta desplegada en Vercel. Aun asi, si desea desplegarla por su cuenta, aqui estan los pasos a seguir
 
-### `npm run eject`
+## 1. Preparar la Aplicación React
+Antes de desplegar la aplicación en Vercel, asegúrate de que tu proyecto de React esté listo para la producción.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Subir el código a un repositorio: Asegúrate de subir tu proyecto a un repositorio en GitHub, GitLab, o Bitbucket. Esto es necesario para conectarlo a Vercel.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. Desplegar la Aplicación en Vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Pasos para desplegar en Vercel:
+1- Iniciar sesión en Vercel: Ve a Vercel e inicia sesión con tu cuenta de GitHub, GitLab o Bitbucket.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2- Crear un nuevo proyecto: En el panel de control de Vercel, haz clic en "New Project".
 
-## Learn More
+3- Conectar el repositorio: Selecciona el repositorio que contiene tu aplicación React.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4- Configurar el proyecto: Vercel detectará automáticamente que se trata de una aplicación React y configurará el comando de construcción como npm run build.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5- Desplegar la aplicación: Haz clic en "Deploy" y espera a que el proceso termine. Al finalizar, recibirás una URL donde podrás ver tu aplicación en línea.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> b937dca (	new file:   .gitignore)
